@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [data, setData] = useState('');
@@ -21,8 +22,6 @@ const Home = () => {
   useEffect(() => {
     console.log('Loading only 1 time when page loads');
   }, []);
-    
-    
 
   return (
     <div>
@@ -36,6 +35,10 @@ const Home = () => {
       />
       <p>{data}</p>
       <p>{data2}</p>
+
+      <button>
+        <Link to="/movies">Go to movies</Link>
+      </button>
     </div>
   );
 };
